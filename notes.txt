@@ -1,0 +1,134 @@
+id - 44 2022 2023
+pwd- 12345678
+
+
+java -> app 
+
+
+	jdk
+		tools
+			javac 
+			java 
+			jdb
+			javadoc 
+			javah
+			
+	jre 
+
+lang. java
+
+----------------------------------------
+jsp-servlet technology---webapp 
+protocol -- set of rules 
+www -> HTTP 
+
+jdk jre --> 1.8 
+
+ide -> eclipse  -> jee 
+browser -> XX 
+server ->?web server -> java web server [apache tomcat 8.5 ]
+database ->  
+
+
+1) client - user - end user -- request  
+2) server/db - computer --- response 
+
+
+
+1) client - user - end user -- request  
+2) server - computer --- response 
+3) database 
+
+n-tier 
+1) client - user - end user -- request  
+2) server - computer --- response 
+3) lb 
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+spring - hibernate framework 
+-----------------------------------------------------
+
+
+M -- [temp ] [database]  
+V -- singup.html , login.html , home.html 
+C -- SignupController
+
+
+
+facebook --> signup.html ->
+
+		data 
+		submit --> request --> server 
+		accept -> check ==> logic -> db email ? db save 
+		
+		response [success failure ]  
+				--> html 
+
+
+
+view 
+controller -> java -- logic --servlet 
+
+model 
+		1) bean - pojo - class public constructor inh non abstract private/protected getters setters  
+		2) dao  - data access object -- > db  
+		
+		
+html -> 		
+		
+		Thread
+--------------------------------------		
+	_HttpServlet_______ class we need to extends to create servlet ?? 
+
+_javax.servlet.http____ package we used for HttpServlet ? 
+
+
+___________ and ________ object we have in argument of service method? 
+
+
+__Servlet___ is an interface which used to create servlet ?
+
+
+_IoException , ServletException_______ exception is thrown by service method in servlet? 
+
+
+
+in which file we need to map our servlet? web.xml 
+
+web.xml is located inside __WEB-INF___ folder ? 
+
+
+full name of MVC ? 
+
+  _<servlet>_____ and _<servlet-mapping>____ element we have to use in web.xml for servlet?
+
+1) java SignupController  
+2)  <servlet> SignupController    
+3   /SignupController 
+
+-------------------------------------------------------------------------------------
+
+
+git --> 
+
+
+
+
+
+	
+		
+	
