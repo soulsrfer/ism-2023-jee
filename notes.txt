@@ -155,7 +155,9 @@ Servlet / controller
 
 	10	+  20	= 30
 ---------------------------------------------------
-	
+scriptlet --> <% %>  java logic 
+expression --><%= %>  java -> print 
+declaration	--><%!  %> java --> instance**** 
 	
 
 

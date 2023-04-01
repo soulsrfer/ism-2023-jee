@@ -3,14 +3,18 @@ package com.google.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class SignupController extends HttpServlet {
+@WebServlet("/RegistrationController")
+public class RegistrationController extends HttpServlet {
 
-	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		System.out.println("SignupController");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		String firstName = request.getParameter("firstName");// null
 		String email = request.getParameter("email");
@@ -20,16 +24,6 @@ public class SignupController extends HttpServlet {
 		System.out.println("email => " + email);
 		System.out.println("password => " + password);
 
-		// response
-		
-		//[XXXX]@[XXXX].[XXX] 2 3  
-
-		response.setContentType("text/html");// pdf audio video jpg html - MIME type
-
-		PrintWriter out = response.getWriter();// IOException
-
-		out.print("<html><body>");
-		// required
 		boolean isError = false;
 		StringBuffer error = new StringBuffer("");
 		if (firstName == null || firstName.trim().length() == 0) {
@@ -57,14 +51,20 @@ public class SignupController extends HttpServlet {
 			error.append("<br>Please Enter Password");
 
 		}
-		if (isError == true) {
-			out.print("<span style='color:red;'>" + error + "</span>");
-		} else {
-			out.print("FirstName => " + firstName + "<br>");
-			out.print("Email => " + email + "<br>");
-			out.print("Password => " + password + "<br>");
-		}
-		out.print("</body></html>");
 
+		// isError = true | false
+		//
+		RequestDispatcher rd = null;
+		if (isError) {
+			// Regi.jsp
+			request.setAttribute("error", error.toString()); 
+			rd = request.getRequestDispatcher("Registration.jsp");
+		} else {
+			// Login.jsp
+			rd = request.getRequestDispatcher("Login.jsp");
+		}
+
+		rd.forward(request, response);
+		
 	}
 }
