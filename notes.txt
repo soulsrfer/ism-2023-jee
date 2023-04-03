@@ -161,8 +161,77 @@ declaration	--><%!  %> java --> instance****
 	
 
 
+-----------------------------
+i	Servlet
+
+ac	GenericServlet
+
+c	HttpServlet 
+
+
+service()
+
+doGet()
+
+
+
+500 user --> SignupController --> 
+
+500 request -> SignupController --> doPost()[500] --> response 
+ 
+1) load class 
+2) create instance 
+3) init()
+4) service() 
+5) destroy()   
+
+
+
+class ThreadSum
+		sum --> 1 to 100 numbers
+
+
+		t1 -> 1 to 25
+		t2 -> 26 to 50
+		t3 -> 51 to 75 
+		t4 -> 76 to 100
+
+main 
+	obj -> t1 t2 t3 t4 
+	t1.start ,t2 t3 t4 
+	print(obj.sum);
+
+------------------------------------
+
+jsp ->
+
+1: translation [.jsp -> .java ]
+2: compilation [.java -> .class ] 
+3: load class 
+4: create instance
+5: jspInit()
+6: _jspService()  
+7: jspDestroy()
 
  
+
+A.java 
+class A {
+	_jspService(){
+		out.print("Hi");
+    	int a = 90;
+	
+		out.print(a); 
+	
+		out.print("Bye"); 
+	}
+}
+	
+	
+	
+	
+
+
 
 
 
