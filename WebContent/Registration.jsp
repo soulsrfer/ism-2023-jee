@@ -6,9 +6,9 @@
 <meta charset="ISO-8859-1">
 <title>Registration</title>
 <style type="text/css">
-	.error{
-		color:red;
-	}
+.error {
+	color: red;
+}
 </style>
 </head>
 <body>
@@ -21,11 +21,13 @@
 
 	<form action="RegistrationController" method="post">
 		FirstName :<input type="text" name="firstName"
-			value="${firstNameValue}" /> <span class="error"><%=firstNameError == null ? "" : firstNameError%></span>
+			value="${user.firstName}" /> <span class="error"><%=firstNameError == null ? "" : firstNameError%></span>
 
-		<br> <br> Email:<input type="text" name="email" value="${emailValue}" /> <span class="error"><%=emailError != null ? emailError : ""%></span>
+		<br> <br> Email:<input type="text" name="email"
+			value="${user.email}" /> <span class="error"><%=emailError != null ? emailError : ""%></span>
 
-		<br> <br> Password:<input type="text"  name="password" /> <span class="error"><%=passwordError == null ? "" : passwordError%></span>
+		<br> <br> Password:<input type="text" name="password" /> <span
+			class="error"><%=passwordError == null ? "" : passwordError%></span>
 
 		<br> <br> <input type="submit" value="Signup" />
 	</form>

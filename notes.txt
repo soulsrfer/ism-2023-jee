@@ -227,9 +227,19 @@ class A {
 	}
 }
 	
+-------------------------------------------
+core***
+	if , case , for , redirect , url , catch , set , out , remove 
+fmt
+sql
+xml
+func
 	
 	
-	
+1) download and add to lib -> jstl.jar 
+2) build path link 
+3) jsp -> import -> use 
+	<%@taglib   %> 
 
 
 
