@@ -62,7 +62,15 @@
 				<td>${user.firstName}</td>
 				<td>${user.email}</td>
 				<td>${user.password}</td>
-				<td><a href="DeleteUserController?userId=${user.userId}">Delete</a></td>
+				<td><a href="DeleteUserController?userId=${user.userId}">Delete</a>
+				|
+				<a href="ViewUserController?userId=${user.userId}">View</a>
+				|
+				<a href="EditUserController?userId=${user.userId}">Edit</a>
+				
+				
+				
+				</td>
 			</tr>
 		</c:forEach>
 

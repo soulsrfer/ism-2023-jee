@@ -98,4 +98,70 @@ public class UserDao {
 
 	}
 
+	public UserBean getUserById(Integer userId) {
+
+		UserBean user = null;
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("select * from users where userId = ?");
+			pstmt.setInt(1, userId);
+
+			ResultSet rs = pstmt.executeQuery();
+
+			if (rs.next()) { // true
+				user = new UserBean();
+				user.setFirstName(rs.getString("firstName"));
+				user.setUserId(rs.getInt("userId"));
+				user.setEmail(rs.getString("email"));
+				user.setPassword(rs.getString("password"));
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return user;
+
+	}
+
+	public void updateUser(UserBean userBean) {
+
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con
+					.prepareStatement("udpate users set firstName = ? , email = ? where userId = ? ");
+			pstmt.setString(1, userBean.getFirstName());
+			pstmt.setString(2, userBean.getEmail());
+			pstmt.setInt(3, userBean.getUserId());
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public ArrayList<UserBean> search(String searchData){
+		ArrayList<UserBean> users = new ArrayList<UserBean>();
+		//select * from users where firstName like 'ra%' ; 
+		
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("select * from users where firstName like ?  ");
+			pstmt.setString(1, searchData+"%");
+			ResultSet rs = pstmt.executeQuery();
+
+			while (rs.next()) { // true
+				UserBean user = new UserBean();
+				user.setFirstName(rs.getString("firstName"));
+				user.setUserId(rs.getInt("userId"));
+				user.setEmail(rs.getString("email"));
+				user.setPassword(rs.getString("password"));
+				users.add(user);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return users;
+	}
 }

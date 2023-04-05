@@ -240,6 +240,56 @@ func
 2) build path link 
 3) jsp -> import -> use 
 	<%@taglib   %> 
+-----------------------------
+
+inHouse 
+
+Login -> hr , admin 
+
+hr -> login -> 
+	HrDahsboard 
+	
+	AddNewResource 
+			Name , Email, contactNum ,Language ,  Technology ,database , resumeURL -> Save 
+	ViewResources 
+			List 
+			Edit,delete 
+	SearchResources -> tejas , java , 6 year exp , 	mongodb , 
+	
+	
+	Resource -> 1+ lang , 1+ techno , 1+ database [dropdown]
+	
+	user hr admin 
+	resource
+	lang
+	techno
+	database 
+---------------------------------------------------------------------------------	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 

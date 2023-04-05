@@ -32,4 +32,24 @@
     <servlet-name>DeleteUserController</servlet-name>
     <url-pattern>/DeleteUserController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewUserController</display-name>
+    <servlet-name>ViewUserController</servlet-name>
+    <servlet-class>com.google.controller.ViewUserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewUserController</servlet-name>
+    <url-pattern>/ViewUserController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditUserController</display-name>
+    <servlet-name>EditUserController</servlet-name>
+    <servlet-class>com.google.controller.EditUserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditUserController</servlet-name>
+    <url-pattern>/EditUserController</url-pattern>
+  </servlet-mapping>
 </web-app>

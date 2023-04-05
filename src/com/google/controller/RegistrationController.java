@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.bean.UserBean;
 import com.google.dao.UserDao;
 import com.google.util.DbConnection;
+import com.google.util.Validations;
 
 @WebServlet("/RegistrationController")
 public class RegistrationController extends HttpServlet {
@@ -36,7 +37,7 @@ public class RegistrationController extends HttpServlet {
 
 		boolean isError = false;
 		StringBuffer error = new StringBuffer("");
-		if (firstName == null || firstName.trim().length() == 0) {
+		if (Validations.isEmpty(firstName)) {
 			isError = true;
 			request.setAttribute("firstNameError", "Please Enter FirstName");
 		} else if (firstName.trim().length() <= 2) {
