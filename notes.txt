@@ -265,12 +265,36 @@ hr -> login ->
 	techno
 	database 
 ---------------------------------------------------------------------------------	
+	table : resource 
+	field 
+	resourceId 		integer 	pk 
+	firstName	varchar 	not null 
+	lastName
+	email
+	address
+	contactNum
+	gender 
+	qualification
+	exp 
+	resumeURL
 	
+	database 
+	databaseId 
+	databaseName 
 	
+	resource_database 
+	resource_database_id	pk 
+	resource_id 			fk	
+	database_id 			fk 
+
+----------------------------------------------------------------------------
+
+Filter |   [Servlet=Controller] 
 
 
-
-
+1) class implements Filter 
+2) override -> logic 
+3) web.xml -> filter mapping -> servlet-controller 
 
 
 
