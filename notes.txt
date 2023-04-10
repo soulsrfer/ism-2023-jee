@@ -284,8 +284,8 @@ hr -> login ->
 	
 	resource_database 
 	resource_database_id	pk 
-	resource_id 			fk	
-	database_id 			fk 
+	resource_id 			fk  1  1  1  	
+	database_id 			fk  1  2  3 
 
 ----------------------------------------------------------------------------
 
@@ -296,17 +296,53 @@ Filter |   [Servlet=Controller]
 2) override -> logic 
 3) web.xml -> filter mapping -> servlet-controller 
 
+----------------------------------------------------------------------------
+
+storage --> 
+	server -> client --> information --> 
+			1) cookie -- client --- browser  
+			2) session -- server -- 
+			
+
+Cookie 
+HttpSession 
 
 
 
+		Cookie c[] = request.getCookies();
+
+	for	
+		c[i].getName()
+		c[i].getValue()
+		
 
 
+session -> server created -->
 
-
-
-
-
-
+	1st request web ->session
+	
+	
+	1 -> req -> server --> check session ? no ->   memory -> session -> unique id -> client->cookie  
+	
+	2-> req[uniqueId] -> server --> check session  ? yes ->  X  | no => create -> id client 
+	
+	JSESSIONID cookie 
+	
+	page 
+	request 
+	session 
+	application -> name -> gabbar 
+				-> name -> gabbar
+				
+				
+	
+	
+	
+	 
+	
+	
+	
+	 
 
 
 

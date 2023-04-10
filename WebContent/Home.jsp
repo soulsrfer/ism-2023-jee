@@ -9,5 +9,14 @@
 <body>
 
 <a href="ListUsersController">List Users</a>
+<br>
+${cookie.firstName.value}
+
+<br>
+${sessionScope.userId}
+<br>
+${userId}
+<br>
+<a href="LogoutController">Logout</a>
 </body>
 </html>
