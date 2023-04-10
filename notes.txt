@@ -381,9 +381,8 @@ aol.com -> .jar -> lib
  
 ------------------------------------------------------------------
 
-
-static inclusion : <%@include  %>
-dynamic inclusion : <jsp:include >
+static inclusion : <%@include file="Header.jsp" %>
+dynamic inclusion : <jsp:include page="Header.jsp" >
 
 Header.jsp 
 	int a; //25kb 
