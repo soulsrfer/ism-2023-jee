@@ -17,6 +17,10 @@ ${sessionScope.userId}
 <br>
 ${userId}
 <br>
-<a href="LogoutController">Logout</a>
+
+<%
+	String url = response.encodeRedirectURL("LogoutController");
+%>
+<a href="<%=url%>">Logout</a>
 </body>
 </html>

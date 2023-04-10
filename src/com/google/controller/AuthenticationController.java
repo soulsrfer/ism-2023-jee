@@ -31,22 +31,25 @@ public class AuthenticationController extends HttpServlet {
 			rd = request.getRequestDispatcher("Login.jsp");
 
 		} else {
-			//cookie name 
-			//session userid 
+			// cookie name
+			// session userid
 			System.out.println(user.getFirstName());
-			
-			Cookie c  = new Cookie("firstName",user.getFirstName()); 
-			c.setMaxAge(60*60*24*7);//second
+
+			Cookie c = new Cookie("firstName", user.getFirstName());
+			c.setMaxAge(60 * 60 * 24 * 7);// second
 			response.addCookie(c);
-			
-			
-			HttpSession session = request.getSession(); //new | old 
+
+			HttpSession session = request.getSession(); // new | old
 			session.setAttribute("userId", user.getUserId());
-			
-			session.setMaxInactiveInterval(60*5);//5 minute
-			
-			rd = request.getRequestDispatcher("Home.jsp");
+
+			session.setMaxInactiveInterval(60 * 5);// 5 minute
+
+			String url = response.encodeRedirectURL("Home.jsp");
+			System.out.println("this is encoded url =>" + url);
+
+			rd = request.getRequestDispatcher(url);
 		}
+
 		rd.forward(request, response);
 	}
 

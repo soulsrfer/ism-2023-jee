@@ -3,11 +3,25 @@ package com.google.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class SignupController extends HttpServlet {
+
+	String paymentId;
+
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+		// ServletConfig config = getServletConfig();
+		paymentId = config.getInitParameter("paymentId");
+
+		ServletContext context = getServletContext();
+		String paymentIdg = context.getInitParameter("paymentId");
+	}
 
 	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		System.out.println("SignupController");
@@ -21,8 +35,8 @@ public class SignupController extends HttpServlet {
 		System.out.println("password => " + password);
 
 		// response
-		
-		//[XXXX]@[XXXX].[XXX] 2 3  
+
+		// [XXXX]@[XXXX].[XXX] 2 3
 
 		response.setContentType("text/html");// pdf audio video jpg html - MIME type
 

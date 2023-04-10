@@ -335,22 +335,66 @@ session -> server created -->
 				-> name -> gabbar
 				
 				
+----------------------------------------------------------------------------
 	
+Listener -> 
+		server --> start , stop 
+				   request -> 
+				   session create , remove 
+				   	
+		NSE BSE  AwS GOOGLE  --> 
+				AWS 12 month -> 750 hours
+				
+		7 8 -> 	
+		AWS -> server start -> open 
+			   server stop  -> close 
+				 
+1) class imlements XXXListener 
+2) override method --- logic 
+3) web.xml	
 	
+UserCounter 
+
+	1 
+	2
+	3
+	4
+	5
+	console -> ol 
+	UserCounter.jsp 
+		5 user
+		
+	UserCounter.jsp 
+		4 user
 	
-	 
-	
-	
-	
-	 
+-------------------------------------------------------------------	 
+
+Paypal -> PayPal.java -> 
+
+aol.com -> .jar -> lib 
+
+	PayPal.class -> 
+		String paymentId ; 
+		chargeCreditCard(customerProfile,amount) 
+		
+	ServletConfig 
+ 
+------------------------------------------------------------------
 
 
+static inclusion : <%@include  %>
+dynamic inclusion : <jsp:include >
 
+Header.jsp 
+	int a; //25kb 
 
-
-
+Home.jsp 
+	include header.jsp dynamic  
+	print a 	//25kb 
 	
-
+	
+session -> cookie 
+session -> url rewriting 
 
 
 

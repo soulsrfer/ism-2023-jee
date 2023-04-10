@@ -7,6 +7,10 @@
   <servlet>
     <servlet-name>SignupController</servlet-name>
     <servlet-class>com.google.controller.SignupController</servlet-class>
+  	<init-param>
+  		<param-name>paymentId</param-name>
+  		<param-value>20074283560</param-value>
+  	</init-param>	
   </servlet>
   <servlet-mapping>
     <servlet-name>SignupController</servlet-name>
@@ -83,5 +87,13 @@
   	<session-timeout>5</session-timeout>
   </session-config>
   
+  <listener>
+  <listener-class>com.google.listener.AwsListener</listener-class>
+  </listener>
+  
+  <context-param>
+  	<param-name>paymentId</param-name>
+  	<param-value>20078342560</param-value>
+  </context-param>
   
 </web-app>

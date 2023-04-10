@@ -1,8 +1,9 @@
 <%@page import="com.google.bean.UserBean"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" errorPage="Error.jsp"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 
 
 <!DOCTYPE html>
@@ -11,6 +12,12 @@
 <meta charset="ISO-8859-1">
 </head>
 <body>
+
+	<%
+		int a = 90;
+		int b = 0;
+		int c = a / b;
+	%>
 
 	<%
 		ArrayList<UserBean> users = (ArrayList<UserBean>) request.getAttribute("users");
@@ -63,14 +70,8 @@
 				<td>${user.email}</td>
 				<td>${user.password}</td>
 				<td><a href="DeleteUserController?userId=${user.userId}">Delete</a>
-				|
-				<a href="ViewUserController?userId=${user.userId}">View</a>
-				|
-				<a href="EditUserController?userId=${user.userId}">Edit</a>
-				
-				
-				
-				</td>
+					| <a href="ViewUserController?userId=${user.userId}">View</a> | <a
+					href="EditUserController?userId=${user.userId}">Edit</a></td>
 			</tr>
 		</c:forEach>
 
